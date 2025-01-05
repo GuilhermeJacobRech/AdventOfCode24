@@ -15,9 +15,9 @@ namespace AdventOfCode24._02
             // Read lines of input.txt
             var inputLines = File.ReadLines(base.InputPath);
 
-            //var ansP1 = SolvePart1(inputLines.ToArray());
+            var ansP1 = SolvePart1(inputLines.ToArray());
             var ansP2 = SolvePart2(inputLines.ToArray());
-            //Console.WriteLine(ansP1);
+            Console.WriteLine(ansP1);
             Console.WriteLine(ansP2);
         }
 
@@ -29,7 +29,7 @@ namespace AdventOfCode24._02
                 // Get list of levels in report
                 var levels = report.Split(' ');
 
-                if (isReportValid(levels)) safeCount++;
+                if (IsReportValid(levels)) safeCount++;
             }
             return safeCount;
         }
@@ -42,7 +42,7 @@ namespace AdventOfCode24._02
                 // Get list of levels in report
                 var levels = report.Split(' ');
 
-                if (isReportValid(levels))
+                if (IsReportValid(levels))
                 {
                     safeCount++;
                     continue;
@@ -54,7 +54,7 @@ namespace AdventOfCode24._02
                         // Create newReport excluding the element at index i
                         string[] newReport = levels.Where((_, index) => index != i).ToArray();
 
-                        if (isReportValid(newReport))
+                        if (IsReportValid(newReport))
                         {
                             safeCount++;
                             break;
@@ -66,7 +66,7 @@ namespace AdventOfCode24._02
             return safeCount;
         }
 
-        private static bool isReportValid(string[] levels)
+        private static bool IsReportValid(string[] levels)
         {
             bool isIncreasing = true;
             bool isSafe = true;

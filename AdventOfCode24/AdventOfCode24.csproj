@@ -13,4 +13,7 @@
 	<ItemGroup>
 		<Content Include="02\**\*" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
+	<ItemGroup>
+		<Content Include="03\**\*" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 </Project>

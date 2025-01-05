@@ -6,8 +6,8 @@ namespace AdventOfCode24
     {
         static void Main(string[] args)
         {
-            _02.Day02 day02 = new();
-            day02.Solve();
+            _03.Day03 day03 = new();
+            day03.Solve();
         }
         
     }

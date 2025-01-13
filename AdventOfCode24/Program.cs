@@ -6,15 +6,12 @@ namespace AdventOfCode24
     {
         static void Main(string[] args)
         {
-            _03.Day03 day03 = new();
-            day03.Solve();
+            Day03 day = new();
+            var p1 = day.SolvePart1();
+            var p2 = day.SolvePart2();
 
-            string lastSevenChars = "don't()";
-            bool isEnabled = true;
-            if (lastSevenChars.Contains("don't()")) isEnabled = false;
-            if (lastSevenChars.Contains("do()")) isEnabled = true;
-            Console.WriteLine(isEnabled);
+            Console.WriteLine($"P1: {p1}");
+            Console.WriteLine($"P2: {p2}");
         }
-        
     }
 }

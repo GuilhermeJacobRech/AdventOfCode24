@@ -6,14 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-	
 	<ItemGroup>
-		<Content Include="01\**\*" CopyToOutputDirectory="PreserveNewest" />
+	  <Content Include="Day01.cs" />
+	  <Content Include="Day02.cs" />
+	  <Content Include="Day03.cs" />
+	  <Content Include="Day04.cs" />
+	  <Content Include="Inputs\Day01.txt" />
+	  <Content Include="Inputs\Day02.txt" />
+	  <Content Include="Inputs\Day03.txt" />
+	  <Content Include="Inputs\Day04.txt" />
 	</ItemGroup>
+
 	<ItemGroup>
-		<Content Include="02\**\*" CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="03\**\*" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="Inputs\**\*" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 </Project>

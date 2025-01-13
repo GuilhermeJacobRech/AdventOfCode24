@@ -10,7 +10,8 @@ namespace AdventOfCode24
     {
         private string Day { get; }
 
-        public string InputPath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{Day}/input.txt");
+        public string InputPath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Inputs/Day{Day}.txt");
+        public string[] GetInputLines() => File.ReadAllLines(InputPath);
 
         /// <summary>
         /// dd format, '01' for day 1 for example.
@@ -20,5 +21,8 @@ namespace AdventOfCode24
         {
             this.Day = day;
         }
+
+        public abstract string SolvePart1();
+        public abstract string SolvePart2();
     }
 }

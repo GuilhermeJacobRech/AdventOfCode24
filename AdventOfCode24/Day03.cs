@@ -5,28 +5,19 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace AdventOfCode24._03
+namespace AdventOfCode24
 {
     internal class Day03() : DayBase("03")
     {
-        public void Solve()
+        public override string SolvePart1()
         {
-            // Read lines of input.txt
-            var inputLines = File.ReadLines(base.InputPath);
-
-            //var ansP1 = SolvePart1(inputLines.ToArray());
-            var ansP2 = SolvePart2(inputLines.ToArray());
-            //Console.WriteLine(ansP1);
-            Console.WriteLine(ansP2);
+            var memories = base.GetInputLines();
+            return CalculateInstructions(memories).ToString();
         }
 
-        private static int SolvePart1(string[] memories)
+        public override string SolvePart2()
         {
-            return CalculateInstructions(memories);
-        }
-
-        private static int SolvePart2(string[] memories)
-        {
+            var memories = base.GetInputLines();
             string[] filteredMemories = new string[memories.Length];
             int i = 0;
             bool isEnabled = true;
@@ -52,15 +43,15 @@ namespace AdventOfCode24._03
                         // Remove the char at the begining of lastSevenChars
                         lastSevenChars = lastSevenChars.Remove(0, 1);
                     }
-                    // Add current chat at the end of lastSevenChars
+                    // Add current char at the end of lastSevenChars
                     lastSevenChars = lastSevenChars.Insert(lastSevenChars.Length, c.ToString());
-                    
+
                 }
                 filteredMemories[i] = temp;
                 i++;
             }
 
-            return CalculateInstructions(filteredMemories);
+            return CalculateInstructions(filteredMemories).ToString();
         }
 
         private static int CalculateInstructions(string[] memories)
@@ -87,7 +78,5 @@ namespace AdventOfCode24._03
             }
             return sum;
         }
-
-
     }
 }

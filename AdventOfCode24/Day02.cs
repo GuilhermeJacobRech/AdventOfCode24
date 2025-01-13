@@ -6,36 +6,28 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode24._02
+namespace AdventOfCode24
 {
     public class Day02() : DayBase("02")
     {
-        public void Solve()
+        public override string SolvePart1()
         {
-            // Read lines of input.txt
-            var inputLines = File.ReadLines(base.InputPath);
-
-            var ansP1 = SolvePart1(inputLines.ToArray());
-            var ansP2 = SolvePart2(inputLines.ToArray());
-            Console.WriteLine(ansP1);
-            Console.WriteLine(ansP2);
-        }
-
-        private static int SolvePart1(string[] reports)
-        {
+            var reports = base.GetInputLines();
             int safeCount = 0;
+
             foreach (var report in reports)
             {
-                // Get list of levels in report
                 var levels = report.Split(' ');
 
                 if (IsReportValid(levels)) safeCount++;
             }
-            return safeCount;
+
+            return safeCount.ToString();
         }
 
-        private static int SolvePart2(string[] reports)
+        public override string SolvePart2()
         {
+            var reports = base.GetInputLines();
             int safeCount = 0;
             foreach (var report in reports)
             {
@@ -61,9 +53,9 @@ namespace AdventOfCode24._02
                         }
                     }
                 }
-                
+
             }
-            return safeCount;
+            return safeCount.ToString();
         }
 
         private static bool IsReportValid(string[] levels)

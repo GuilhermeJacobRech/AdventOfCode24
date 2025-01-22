@@ -11,10 +11,6 @@
 	  <Content Include="Day02.cs" />
 	  <Content Include="Day03.cs" />
 	  <Content Include="Day04.cs" />
-	  <Content Include="Inputs\Day01.txt" />
-	  <Content Include="Inputs\Day02.txt" />
-	  <Content Include="Inputs\Day03.txt" />
-	  <Content Include="Inputs\Day04.txt" />
 	</ItemGroup>
 
 	<ItemGroup>

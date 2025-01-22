@@ -12,6 +12,7 @@ namespace AdventOfCode24
 
         public string InputPath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Inputs/Day{Day}.txt");
         public string[] GetInputLines() => File.ReadAllLines(InputPath);
+        public string GetInputText() => File.ReadAllText(InputPath);
 
         /// <summary>
         /// dd format, '01' for day 1 for example.
